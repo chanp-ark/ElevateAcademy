@@ -6,7 +6,7 @@ import { FluidObject } from 'gatsby-image';
 
 import { Footer } from '../components/Footer';
 import SiteNav from '../components/header/SiteNav';
-import { PostCard } from '../components/PostCard';
+import { Card } from '../components/Card';
 import { Wrapper } from '../components/Wrapper';
 import IndexLayout from '../layouts';
 import {
@@ -189,7 +189,7 @@ const Author = ({ data, location }: AuthorTemplateProps) => {
           <div css={inner}>
             <div css={[PostFeed]}>
               {edges.map(({ node }) => {
-                return <PostCard key={node.fields.slug} post={node} />;
+                return <Card key={node.fields.slug} post={node} />;
               })}
             </div>
           </div>

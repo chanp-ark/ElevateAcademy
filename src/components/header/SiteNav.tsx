@@ -95,15 +95,7 @@ class SiteNav extends React.Component<SiteNavProps, SiteNavState> {
                 <li role="menuitem">
                   <Link to="/about" activeClassName="nav-current">About</Link>
                 </li>
-                <li role="menuitem">
-                  <Link to="/tags/getting-started/" activeClassName="nav-current">Getting Started</Link>
-                </li>
               </ul>
-              {isPost && (
-                <NavPostTitle ref={this.titleRef} className="nav-post-title">
-                  {post.title}
-                </NavPostTitle>
-              )}
             </SiteNavContent>
           </SiteNavLeft>
           <SiteNavRight>
@@ -118,17 +110,6 @@ class SiteNav extends React.Component<SiteNavProps, SiteNavState> {
                   rel="noopener noreferrer"
                 >
                   <Facebook />
-                </a>
-              )}
-              {config.twitter && (
-                <a
-                  css={SocialLink}
-                  href={config.twitter}
-                  title="Twitter"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Twitter />
                 </a>
               )}
             </SocialLinks>

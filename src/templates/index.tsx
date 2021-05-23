@@ -8,7 +8,7 @@ import { css } from '@emotion/react';
 import { Footer } from '../components/Footer';
 import SiteNav from '../components/header/SiteNav';
 import Pagination from '../components/Pagination';
-import { PostCard } from '../components/PostCard';
+import { Card } from '../components/Card';
 import { Wrapper } from '../components/Wrapper';
 import IndexLayout from '../layouts';
 import {
@@ -118,12 +118,13 @@ const IndexPage: React.FC<IndexProps> = props => {
         <main id="site-main" css={[SiteMain, outer]}>
           <div css={[inner, Posts]}>
             <div css={[PostFeed]}>
-              {props.data.allMarkdownRemark.edges.map((post, index) => {
+              {props.data.allMarkdownRemark.edges.map(post => {
+                console.log(props.data.allMarkdownRemark.edges);
                 // filter out drafts in production
                 return (
                   (post.node.frontmatter.draft !== true ||
                     process.env.NODE_ENV !== 'production') && (
-                    <PostCard key={post.node.fields.slug} post={post.node} large={index === 0} />
+                    <Card key={post.node.fields.slug} post={post.node}/>
                   )
                 );
               })}
@@ -164,7 +165,7 @@ export const pageQuery = graphql`
       }
     }
     allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
+      sort: { fields: [frontmatter___date], order: ASC }
       filter: { frontmatter: { draft: { ne: true } } }
       limit: $limit
       skip: $skip
