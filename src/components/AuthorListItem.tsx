@@ -8,7 +8,7 @@ import { css } from '@emotion/react';
 
 import { colors } from '../styles/colors';
 import { Author } from '../templates/post';
-import { AuthorProfileImage } from './PostCard';
+import { AuthorProfileImage } from './Card';
 import styled from '@emotion/styled';
 
 interface AuthorListItemProps {

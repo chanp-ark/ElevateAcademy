@@ -6,7 +6,7 @@ import styled from '@emotion/styled';
 import { colors } from '../styles/colors';
 import { inner, outer } from '../styles/shared';
 import { PageContext } from '../templates/post';
-import { PostCard } from './PostCard';
+import { Card } from './Card';
 import { ReadNextCard } from './ReadNextCard';
 
 interface ReadNextProps {
@@ -48,8 +48,8 @@ export const ReadNext = ({ relatedPosts, currentPageSlug, tags, pageContext }: R
             />
           )}
 
-          {pageContext.prev && <PostCard post={pageContext.prev} />}
-          {pageContext.next && <PostCard post={pageContext.next} />}
+          {pageContext.prev && <Card post={pageContext.prev} />}
+          {pageContext.next && <Card post={pageContext.next} />}
         </ReadNextFeed>
       </div>
     </ReadNextAside>

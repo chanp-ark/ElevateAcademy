@@ -5,7 +5,7 @@ import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 
 import SiteNav from '../components/header/SiteNav';
-import { PostCard } from '../components/PostCard';
+import { Card } from '../components/Card';
 import { Wrapper } from '../components/Wrapper';
 import IndexLayout from '../layouts';
 import { colors } from '../styles/colors';
@@ -48,7 +48,7 @@ const NotFoundPage: React.FC<NotFoundTemplateProps> = props => {
 
             <div css={PostFeed} className="post-feed">
               {edges.map(({ node }) => (
-                <PostCard key={node.fields.slug} post={node} />
+                <Card key={node.fields.slug} post={node} />
               ))}
             </div>
           </div>

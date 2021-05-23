@@ -4,7 +4,7 @@ const path = require('path');
 module.exports = {
   siteMetadata: {
     title: 'Elevate Academy',
-    description: 'At Elevate Academy, we elevate students to be positioned for success through tutoring, coaching, and counseling.',
+    description: 'At Elevate Academy, we elevate students to be positioned for success through tutoring and coaching.',
     siteUrl: 'https://elevateacademy.live', // full path to blog - no ending slash
   },
   mapping: {
