@@ -47,11 +47,6 @@ export const Card: React.FC<PostCardProps> = ({ post, large = true }) => {
       <PostCardContent className="post-card-content">
         <div className="post-card-content-link" css={PostCardContentLink}>
           <PostCardHeader className="post-card-header">
-            {post.frontmatter.tags && (
-              <PostCardPrimaryTag className="post-card-primary-tag">
-                {post.frontmatter.tags[0]}
-              </PostCardPrimaryTag>
-            )}
             <PostCardTitle className="post-card-title">{post.frontmatter.title}</PostCardTitle>
           </PostCardHeader>
           <PostCardExcerpt className="post-card-excerpt">
