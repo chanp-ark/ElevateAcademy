@@ -170,28 +170,6 @@ const PageTemplate = ({ data, pageContext, location }: PageTemplateProps) => {
                 <PostFullCustomExcerpt className="post-full-custom-excerpt">
                   {post?.frontmatter?.excerpt}
                 </PostFullCustomExcerpt>
-                <PostFullByline className="post-full-byline">
-                  <section className="post-full-byline-content">
-                    <AuthorList authors={post?.frontmatter?.author} tooltip="large" />
-                    <section className="post-full-byline-meta">
-                      <h4 className="author-name">
-                        {post.frontmatter.author.map(author => (
-                          <Link key={author?.id} to={`/author/${_.kebabCase(author?.id)}/`}>
-                            {author?.id}
-                          </Link>
-                        ))}
-                      </h4>
-                      <div className="byline-meta-content">
-                        <time className="byline-meta-date" dateTime={datetime}>
-                          {displayDatetime}
-                        </time>
-                        <span className="byline-reading-time">
-                          <span className="bull">&bull;</span> {post?.timeToRead} min read
-                        </span>
-                      </div>
-                    </section>
-                  </section>
-                </PostFullByline>
               </PostFullHeader>
 
               {post?.frontmatter?.image?.childImageSharp && (
