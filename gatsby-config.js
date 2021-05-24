@@ -11,6 +11,14 @@ module.exports = {
     'MarkdownRemark.frontmatter.author': 'AuthorYaml',
   },
   plugins: [
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: /img/,
+        },
+      },
+    },
     'gatsby-plugin-sitemap',
     {
       resolve: 'gatsby-plugin-sharp',

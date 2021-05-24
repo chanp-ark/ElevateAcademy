@@ -101,23 +101,11 @@ class SiteNav extends React.Component<SiteNavProps, SiteNavState> {
             </SiteNavContent>
           </SiteNavLeft>
           <SiteNavRight>
-            <SocialLinks>
-              {config.facebook && (
-                <a
-                  className="social-link-fb"
-                  css={[SocialLink, SocialLinkFb]}
-                  href={config.facebook}
-                  target="_blank"
-                  title="Facebook"
-                  rel="noopener noreferrer"
-                >
-                  <Facebook />
-                </a>
-              )}
-            </SocialLinks>
-            {config.showSubscribe && (
-              <SubscribeButton onClick={this.openModal}>Subscribe</SubscribeButton>
-            )}
+            <ul css={NavStyles} role="menu">
+              <li role="menuitem">
+                <Link to="/contact" activeClassName="nav-current">Contact</Link>
+              </li>
+            </ul>
           </SiteNavRight>
         </nav>
       </>
@@ -237,6 +225,10 @@ const SiteNavRight = styled.div`
   padding: 10px 0;
   height: 64px;
 
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
+  white-space: nowrap;
   @media (max-width: 700px) {
     display: none;
   }
