@@ -1,5 +1,4 @@
 import { Link } from 'gatsby';
-import { setLightness } from 'polished';
 import React from 'react';
 import styled from '@emotion/styled';
 import { css } from '@emotion/react';
@@ -21,23 +20,17 @@ export const Footer: React.FC = () => {
           )}
         </section>
         <SiteFooterNav>
-          <Link to="/">Latest Posts</Link>
+          <Link to="/">About Us</Link>
           {config.facebook && (
             <a href={config.facebook} target="_blank" rel="noopener noreferrer">
               Facebook
             </a>
           )}
-          {config.twitter && (
-            <a href={config.twitter} target="_blank" rel="noopener noreferrer">
-              Twitter
-            </a>
-          )}
-
           <a href="https://github.com/scttcper/gatsby-casper" target="_blank" rel="noopener noreferrer">
-            Casper
+            Testimonials
           </a>
 
-          <a href="/rss.xml">RSS</a>
+          <a href="#">Contact</a>
         </SiteFooterNav>
       </div>
     </footer>
@@ -46,10 +39,10 @@ export const Footer: React.FC = () => {
 
 const SiteFooter = css`
   position: relative;
-  padding-top: 20px;
-  padding-bottom: 60px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   color: #fff;
-  background: ${setLightness('0.0015', colors.darkgrey)};
+  background: ${colors.blue} no-repeat 50%;
 `;
 
 const SiteFooterContent = css`

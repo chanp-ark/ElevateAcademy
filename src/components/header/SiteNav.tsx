@@ -80,13 +80,12 @@ class SiteNav extends React.Component<SiteNavProps, SiteNavState> {
   };
 
   render() {
-    const { isHome = false, isPost = false, post = {} } = this.props;
     return (
       <>
         {config.showSubscribe && <SubscribeModal ref={this.subscribe} />}
         <nav css={SiteNavStyles}>
           <SiteNavLeft className="site-nav-left">
-            {!isHome && <SiteNavLogo />}
+            <SiteNavLogo/>
             <SiteNavContent css={[this.state.showTitle ? HideNav : '']}>
               <ul css={NavStyles} role="menu">
                 <li role="menuitem">

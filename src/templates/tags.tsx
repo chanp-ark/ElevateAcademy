@@ -95,7 +95,6 @@ const Tags = ({ pageContext, data, location }: TagTemplateProps) => {
           </div>
           <ResponsiveHeaderBackground
             css={[outer, SiteHeaderBackground]}
-            backgroundImage={tagData?.node?.image?.childImageSharp?.fluid?.src}
             className="site-header-background"
           >
             <SiteHeaderContent css={inner} className="site-header-content">
