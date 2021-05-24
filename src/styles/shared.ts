@@ -124,8 +124,7 @@ export const SiteHeaderStyles = css`
   /* margin-top: 64px; */
   padding-bottom: 12px;
   color: #fff;
-  /* background: color(var(--darkgrey) l(-5%)) no-repeat center center; */
-  background: ${lighten('-0.05', colors.darkgrey)} no-repeat center center;
+  background: ${lighten('-0.05', colors.blue)} no-repeat center center;
   background-size: cover;
 
   :before {
@@ -197,8 +196,7 @@ export const ResponsiveHeaderBackground = styled.div<{ backgroundImage?: string 
     color: #fff;
     background-size: cover;
     /* background: color(var(--darkgrey) l(-5%)) no-repeat center center; */
-    background: #090a0b no-repeat 50%;
-    background-image: url(${p.backgroundImage});
+    background: ${colors.blue} no-repeat 50%;
 
     :before {
       content: '';
@@ -332,7 +330,7 @@ export const NoImage = css`
     padding-top: 0;
     padding-bottom: 0;
     /* color: var(--darkgrey); */
-    color: ${colors.darkgrey};
+    color: ${colors.blue};
     background: #fff;
     opacity: 1;
   }
