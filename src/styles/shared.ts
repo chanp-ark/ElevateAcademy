@@ -295,7 +295,7 @@ export const ResponsiveHeaderBackground = styled.div<{ backgroundImage?: string 
     }
 
     .site-title {
-      font-size: 4.2rem;
+      font-size: 3.2rem;
       text-align: center;
     }
 
@@ -384,7 +384,7 @@ export const NoImage = css`
     }
 
     .site-title {
-      font-size: 4.2rem;
+      font-size: 3.2rem;
       text-align: center;
     }
 
