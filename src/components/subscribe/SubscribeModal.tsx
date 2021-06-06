@@ -11,7 +11,7 @@ interface SubscribeState {
 }
 
 export class SubscribeModal extends React.Component<any, SubscribeState> {
-  state = { isOpen: true };
+  state = { isOpen: false };
 
   componentWillUnmount() {
     this.unsubscribeEsc();
